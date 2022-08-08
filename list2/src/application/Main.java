@@ -34,6 +34,9 @@ public class Main {
         for(String x : result) {
             System.out.println(x);
         }
+        System.out.println("--------------------------------");
+        String name = AllStarList.stream().filter(x -> x.charAt(0) == 'J').findFirst().orElse(null);
+        System.out.println(name);
 
     }
 }
