@@ -16,5 +16,17 @@ public class Main {
         for(String player : AllStarList) {
             System.out.println(player);
         }
+        System.out.println(AllStarList.size());
+
+
+        System.out.println("--------------------------------");
+
+        AllStarList.remove(1);
+        AllStarList.removeIf(player -> player.charAt(0) == 'S');
+        for(String player : AllStarList) {
+            System.out.println(player);
+        }
+        System.out.println(AllStarList.size());
+
     }
 }
