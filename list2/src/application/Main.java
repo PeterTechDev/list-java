@@ -11,6 +11,7 @@ public class Main {
         AllStarList.add("Kobe Bryant");
         AllStarList.add("Stephen Curry");
         AllStarList.add("Jayson Tatum");
+        AllStarList.add(2, "Jaylen Brown");
 
         for(String player : AllStarList) {
             System.out.println(player);
