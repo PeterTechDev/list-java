@@ -2,6 +2,7 @@ package application;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,7 +17,8 @@ public class Main {
         for(String player : AllStarList) {
             System.out.println(player);
         }
-        System.out.println(AllStarList.size());
+        System.out.println("Tamanho da lista: " + AllStarList.size());
+
 
 
         System.out.println("--------------------------------");
@@ -26,7 +28,12 @@ public class Main {
         for(String player : AllStarList) {
             System.out.println(player);
         }
-        System.out.println(AllStarList.size());
+        System.out.println("Tamanho da lista: " + AllStarList.size());
+        System.out.println("Index of James Harden: " + AllStarList.indexOf("James Harden")); // quiando não encontra shows -1
+        List<String> result = AllStarList.stream().filter(x -> x.charAt(0) == 'L').collect(Collectors.toList());
+        for(String x : result) {
+            System.out.println(x);
+        }
 
     }
 }
